@@ -1,0 +1,15 @@
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\bin\Debug\ClassicCraftGUI.exe.config
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\bin\Debug\ClassicCraftGUI.exe
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\bin\Debug\ClassicCraftGUI.pdb
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI.csprojAssemblyReference.cache
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\MainWindow.g.cs
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\App.g.cs
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI_MarkupCompile.cache
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI_MarkupCompile.lref
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\MainWindow.baml
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI.g.resources
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI.Properties.Resources.resources
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI.csproj.GenerateResource.cache
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI.csproj.CoreCompileInputs.cache
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI.exe
+D:\VSProjects\ClassicCraftGUI\ClassicCraftGUI\obj\Debug\ClassicCraftGUI.pdb
