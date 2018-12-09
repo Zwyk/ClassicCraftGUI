@@ -141,26 +141,55 @@
                                             <TextBlock Text="Boss Low Life at (seconds)" Grid.Column="0" />
                                             <TextBox x:Name="BossLowLifeTime" PreviewTextInput="BossLowLifeTime_PreviewTextInput" Grid.Column="1" />
                                         </Grid>
-                                        <StackPanel Margin="0 10 0 0">
-                                            <TextBlock Text="Boss debuffs" Grid.Column="0" />
-                                            <Border Margin="2" Padding="2" BorderBrush="#D0D0D0" BorderThickness="1" Background="#E9E9E9" CornerRadius="2">
-                                                <Grid Margin="2">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="*" />
-                                                    </Grid.ColumnDefinitions>
-                                                    <StackPanel Grid.Column="0" Margin="0 0 10 0">
-                                                        <CheckBox Checked="Debuff_Checked" x:Name="SunderArmor" Content="Sunder Armor" />
-                                                        <CheckBox Checked="Debuff_Checked" x:Name="CurseOfRecklessness" Content="Curse of Recklessness" />
-                                                    </StackPanel>
-                                                    <StackPanel Grid.Column="1">
-                                                        <CheckBox Checked="Debuff_Checked" x:Name="FaerieFire" Content="Faerie Fire" />
-                                                        <CheckBox Checked="Debuff_Checked" x:Name="Annihilator" Content="Annihilator" />
-                                                    </StackPanel>
-                                                </Grid>
-                                            </Border>
-                                        </StackPanel>
                                     </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </TabItem>
+                <TabItem Header="Buffs/Debuffs">
+                    <Border Padding="4" BorderBrush="#D6D6D6" BorderThickness="1" Background="#FAFAFA" CornerRadius="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="Player Buffs" />
+                                <Border Margin="2" Padding="4" BorderBrush="#D6D6D6" BorderThickness="1" Background="#F2F2F2" CornerRadius="2">
+                                    <Grid Margin="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                                            <CheckBox x:Name="filler1" Content="filler1" />
+                                            <CheckBox x:Name="filler2" Content="filler2" />
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1">
+                                            <CheckBox x:Name="filler3" Content="filler3" />
+                                            <CheckBox x:Name="filler4" Content="filler4" />
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="Boss Debuffs"/>
+                                <Border Margin="2" Padding="2" BorderBrush="#D6D6D6" BorderThickness="1" Background="#F2F2F2" CornerRadius="2">
+                                    <Grid Margin="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                                            <CheckBox x:Name="SunderArmor" Content="Sunder Armor" />
+                                            <CheckBox x:Name="CurseOfRecklessness" Content="Curse of Recklessness" />
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1">
+                                            <CheckBox x:Name="FaerieFire" Content="Faerie Fire" />
+                                            <CheckBox x:Name="Annihilator" Content="Annihilator" />
+                                        </StackPanel>
+                                    </Grid>
                                 </Border>
                             </StackPanel>
                         </Grid>
@@ -168,8 +197,8 @@
                 </TabItem>
                 <TabItem Header="Player">
                     <Border Padding="4" BorderBrush="#D6D6D6" BorderThickness="1" Background="#FAFAFA" CornerRadius="2">
-                        <TabControl SelectedIndex="0" Grid.Row="0">
-                            <TabItem Header="Test1">
+                        <TabControl SelectionChanged="PlayerTabs_SelectionChanged" x:Name="PlayerTabs" SelectedIndex="0" Grid.Row="0">
+                            <TabItem x:Name="SampleTab" Header="Player1">
                                 <Border Margin="2" Padding="4" BorderBrush="#D6D6D6" BorderThickness="1" Background="#F2F2F2" CornerRadius="2">
                                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                                         <StackPanel>
@@ -219,199 +248,10 @@
                                                                 <ColumnDefinition Width="*" />
                                                             </Grid.ColumnDefinitions>
                                                             <TextBlock Text="MH" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="OH" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Ranged" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Head" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Neck" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Shoulders" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Cape" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Chest" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Wrist" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Hands" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Belt" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Legs" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Feet" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Ring1" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Ring2" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Trinket1" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
-                                                            <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
-                                                            <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
-                                                        </Grid>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="70" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="Trinket2" Grid.Column="0" VerticalAlignment="Center" />
-                                                            <TextBox VerticalAlignment="Center"  Grid.Column="1" />
+                                                            <ComboBox IsEditable="True" IsTextSearchEnabled="True" VerticalAlignment="Center" Grid.Column="1">
+                                                                <ComboBoxItem Content="Test" />
+                                                                <ComboBoxItem Content="Gzg" />
+                                                            </ComboBox>
                                                             <Button Content="Stats" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="4 4 2 4" Grid.Column="2" />
                                                             <Button Content="Enchantment" HorizontalAlignment="Center" Padding="5 2 5 2" Margin="2 4 4 4" Grid.Column="3" />
                                                         </Grid>
@@ -422,13 +262,13 @@
                                     </ScrollViewer>
                                 </Border>
                             </TabItem>
-                            <TabItem Header="+">
+                            <TabItem x:Name="AddPlayer" Header="+" >
                                 
                             </TabItem>
                         </TabControl>
                     </Border>
                 </TabItem>
-                <TabItem Header="Item Editor">
+                <TabItem Header="Items Manager">
                     
                 </TabItem>
             </TabControl>
